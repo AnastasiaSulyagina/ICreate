@@ -1,0 +1,31 @@
+﻿<xapCache source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\Bin\Release\ICreate_Release_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="16.10.2014 17:47:53">
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\obj\Release\ICreate.dll" archivePath="ICreate.dll" lastWriteTime="16.10.2014 17:47:52" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="08.10.2014 2:06:19" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="08.10.2014 2:06:19" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="08.10.2014 2:06:19" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="08.10.2014 2:06:19" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="08.10.2014 2:06:19" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="08.10.2014 2:06:19" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="08.10.2014 2:06:19" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\Images\add.png" archivePath="Images\add.png" lastWriteTime="09.10.2014 12:11:24" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\Images\fb.png" archivePath="Images\fb.png" lastWriteTime="13.10.2014 0:54:21" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\Images\icon_36.png" archivePath="Images\icon_36.png" lastWriteTime="10.10.2014 13:26:05" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\Images\icon_96.png" archivePath="Images\icon_96.png" lastWriteTime="10.10.2014 13:25:20" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\Images\instagram.jpg" archivePath="Images\instagram.jpg" lastWriteTime="13.10.2014 0:53:34" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\Images\list.png" archivePath="Images\list.png" lastWriteTime="09.10.2014 12:27:06" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\Images\map.png" archivePath="Images\map.png" lastWriteTime="09.10.2014 12:12:11" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\Images\search.png" archivePath="Images\search.png" lastWriteTime="09.10.2014 12:10:09" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\Images\twitter.png" archivePath="Images\twitter.png" lastWriteTime="13.10.2014 1:04:13" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\Images\vk.png" archivePath="Images\vk.png" lastWriteTime="13.10.2014 0:57:25" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\README_FIRST.txt" archivePath="README_FIRST.txt" lastWriteTime="09.10.2014 16:50:50" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\Toolkit.Content\ApplicationBar.Add.png" archivePath="Toolkit.Content\ApplicationBar.Add.png" lastWriteTime="09.10.2014 16:50:50" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\Toolkit.Content\ApplicationBar.Cancel.png" archivePath="Toolkit.Content\ApplicationBar.Cancel.png" lastWriteTime="09.10.2014 16:50:50" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\Toolkit.Content\ApplicationBar.Check.png" archivePath="Toolkit.Content\ApplicationBar.Check.png" lastWriteTime="09.10.2014 16:50:50" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\Toolkit.Content\ApplicationBar.Delete.png" archivePath="Toolkit.Content\ApplicationBar.Delete.png" lastWriteTime="09.10.2014 16:50:49" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\Toolkit.Content\ApplicationBar.Select.png" archivePath="Toolkit.Content\ApplicationBar.Select.png" lastWriteTime="09.10.2014 16:50:49" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\Bin\Release\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="09.10.2014 19:37:27" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\packages\PhoneThemeManager.2.1.2\lib\windowsphone8\JeffWilcox.PhoneThemeManager.dll" archivePath="JeffWilcox.PhoneThemeManager.dll" lastWriteTime="09.10.2014 13:50:59" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll" archivePath="Microsoft.Phone.Controls.Toolkit.dll" lastWriteTime="09.10.2014 16:50:49" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\Images\icon.png" archivePath="Images\icon.png" lastWriteTime="09.10.2014 18:02:06" />
+  <file source="C:\Users\анастасия\Documents\Visual Studio 2012\Projects\ICreate\ICreate\Bin\Release\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="09.10.2014 19:37:27" />
+</xapCache>

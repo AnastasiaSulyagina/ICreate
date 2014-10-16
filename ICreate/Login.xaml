@@ -1,0 +1,72 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="ICreate.Login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" ForegroundColor="#FFD1D6D9" BackgroundColor="#FFC0392B">
+            <shell:ApplicationBarIconButton x:Name="ToMapButton" IconUri="/Images/map.png" Text="на карту" Click="AddButton_Click"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="#FFC0392B">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="2" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="Login1" HorizontalAlignment="Left" Height="72" Margin="7,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="402" BorderThickness="0,0,0,2" Foreground="#FF21201E" Grid.Row="1" Text="Login">
+                <TextBox.Background>
+                    <SolidColorBrush Color="Transparent"/>
+                </TextBox.Background>
+                <TextBox.BorderBrush>
+                    <SolidColorBrush Color="#FF7C2400"/>
+                </TextBox.BorderBrush>
+            </TextBox>
+            <PasswordBox x:Name="Password" HorizontalAlignment="Left" Margin="7,182,0,0" VerticalAlignment="Top" Width="402" BorderThickness="0,0,0,2" Foreground="#FF21201E" Grid.Row="1" Height="70" Password="Password">
+                <PasswordBox.BorderBrush>
+                    <SolidColorBrush Color="#FF7C2400"/>
+                </PasswordBox.BorderBrush>
+                <PasswordBox.Background>
+                    <SolidColorBrush Color="Transparent"/>
+                </PasswordBox.Background>
+            </PasswordBox>
+            <Button Content="войти" HorizontalAlignment="Left" Height="108" Margin="192,252,0,0" VerticalAlignment="Top" Width="217" BorderThickness="0" Grid.Row="1">
+                <Button.Foreground>
+                    <SolidColorBrush Color="Black"/>
+                </Button.Foreground>
+                <Button.Background>
+                    <SolidColorBrush Color="#FFD1D6D9"/>
+                </Button.Background>
+                <Button.BorderBrush>
+                    <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
+                </Button.BorderBrush>
+            </Button>
+            <Image HorizontalAlignment="Left" Height="80" Margin="20,20,0,20" Grid.RowSpan="2" VerticalAlignment="Top" Width="80" Source="/Images/vk.png"/>
+            <Image HorizontalAlignment="Left" Height="80" Margin="120,20,0,20" Grid.RowSpan="2" VerticalAlignment="Top" Width="80" Source="/Images/fb.png"/>
+            <Image HorizontalAlignment="Left" Height="80" Margin="220,20,0,20" Grid.RowSpan="2" VerticalAlignment="Top" Width="80" Source="/Images/twitter.png"/>
+            <Image HorizontalAlignment="Left" Height="80" Margin="320,20,0,20" Grid.RowSpan="2" VerticalAlignment="Top" Width="80" Source="/Images/instagram.jpg"/>
+
+        </Grid>
+        <Image HorizontalAlignment="Left" Height="63" Margin="10,15,0,0" VerticalAlignment="Top" Width="67" Source="/Images/icon_96.png" Grid.RowSpan="2" Tap="Image_Tap"/>
+        <TextBlock Text="ясоздал!" Style="{StaticResource PhoneTextNormalStyle}" Margin="68,13,29,10.688" FontSize="40" Foreground="#FFD1D6D9" Tap="TextBlock_Tap"/>
+    </Grid>
+
+</phone:PhoneApplicationPage>
