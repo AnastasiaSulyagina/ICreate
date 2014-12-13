@@ -7,6 +7,9 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using System.Net.Http;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace ICreate
 {
@@ -17,9 +20,20 @@ namespace ICreate
             InitializeComponent();
         }
 
+        
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.GoBack();
+            if (!ServerAPI.isAuthorized)
+            {
+                NavigationService.Navigate(new Uri("/Login.xaml", UriKind.Relative));
+            }
+            else///////
+            {//////
+                var descr = EventDescription.Text;
+                ServerAPI.addEvent(descr);
+                NavigationService.GoBack();
+            }//////
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -35,6 +49,13 @@ namespace ICreate
         private void TextBlock_Tap(object sender, System.Windows.Input.GestureEventArgs e)
         {
             NavigationService.Navigate(new Uri("/Menu.xaml", UriKind.Relative));
+        }
+
+        private async void TimeButton_Click(object sender, EventArgs e)
+        {
+            //var dpf = new DatePickerFlyout();
+            //await dpf.ShowAtAsync(targetFrameWorkElement);
+            //var date = dpf.Date;
         }
     }
 }

@@ -15,12 +15,13 @@
     mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
     <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar IsVisible="True" ForegroundColor="#FFD1D6D9" BackgroundColor="#FFC0392B">
+        <shell:ApplicationBar IsVisible="True" BackgroundColor="#FFE6E6E6" ForegroundColor="#FFC0392B">
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="мои события"/>
             </shell:ApplicationBar.MenuItems>
             <shell:ApplicationBarIconButton x:Name="ToMapButton" IconUri="/Images/map.png" Text="на карту" Click="AddButton_Click"/>
             <shell:ApplicationBarIconButton x:Name="AddButton" IconUri="/Images/add.png" Text="добавить" Click="AddButton_Click" />
+            <shell:ApplicationBarIconButton x:Name="RefreshButton" IconUri="/Assets/AppBar/refresh.png" Text="обновить" Click="RefreshButton_Click"/>
             <shell:ApplicationBarIconButton x:Name="SearchButton" IconUri="/Images/search.png" Text="поиск" Click="SearchButton_Click"/>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
@@ -35,17 +36,63 @@
         <!--TitlePanel contains the name of the application and page title-->
 
         <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Background="#FFD1D6D9" Grid.Row="1">
+        <Grid x:Name="ContentPanel" Background="#FFE6E6E6" Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-
+            <phone:LongListSelector x:Name="eventList" HorizontalAlignment="Left" Height="592" Margin="10,95,0,0" VerticalAlignment="Top" Width="460" SelectionChanged="eventList_SelectionChanged">
+                <phone:LongListSelector.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="0,0,0,10" Background="White" Height="155
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    ">
+                            <StackPanel Height="110">
+                                <TextBlock Text="{Binding user.UserName}" TextWrapping="Wrap" Margin="5,5,5,5" Foreground="#FFC0392B" FontSize="14"/>
+                                <TextBlock Text="{Binding description}" TextWrapping="Wrap" Margin="5,5,5,5" Foreground="#FF21201E"/>
+                            </StackPanel>
+                            <StackPanel Background="White" Height="45" Opacity="1.0" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" >
+                                <Image Source="/Images/panel.png" Height="45"/>
+                                <!--<Image Source="/Images/appbar.heart.png" Height="40" Width="40"/>
+                                <Image Source="/Images/appbar.location.round.png" Height="40" Width="40"/>
+                                <Image Source="/Images/appbar.user.png" Height="40" Width="40"/>-->
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </phone:LongListSelector.ItemTemplate>
+            </phone:LongListSelector>
+            <ProgressBar x:Name="updateProgressBar" IsIndeterminate="false" HorizontalAlignment="Left" Height="10" Margin="10,85,0,0" VerticalAlignment="Top" Width="459" RenderTransformOrigin="0.5,0.5">
+                <ProgressBar.RenderTransform>
+                    <CompositeTransform ScaleY="-1"/>
+                </ProgressBar.RenderTransform>
+            </ProgressBar>
         </Grid>
-        <Image HorizontalAlignment="Left" Height="63" Margin="10,15,0,0" VerticalAlignment="Top" Width="67" Source="/Images/icon_96.png" Tap="Image_Tap"/>
-        <TextBlock Text="ясоздал!" Style="{StaticResource PhoneTextNormalStyle}" Margin="68,13,29,15" FontSize="40" Foreground="#FFD1D6D9" Tap="TextBlock_Tap"/>
+        <Grid x:Name="HeaderPanel" Margin="0,0,0,611" Grid.RowSpan="2" Background="#FFC0392B" Height="85">
+            <Image HorizontalAlignment="Left" Height="63" Margin="10,15,0,0" VerticalAlignment="Top" Width="67" Source="/Images/icon_96.png" Tap="Image_Tap"/>
+            <TextBlock Text="ясоздал!" Style="{StaticResource PhoneTextNormalStyle}" Margin="68,13,248,15" FontSize="40" Foreground="#FFD1D6D9" Tap="TextBlock_Tap"/>
+        </Grid>
     </Grid>
 
 </phone:PhoneApplicationPage>

@@ -9,6 +9,7 @@ using Microsoft.Phone.Shell;
 using ICreate.Resources;
 using Microsoft.Phone.Maps.Controls;
 using System.Device.Location;
+using System.Windows.Media;
 
 namespace ICreate
 {
@@ -119,7 +120,13 @@ namespace ICreate
             // screen to remain active until the application is ready to render.
             RootFrame = new Microsoft.Phone.Controls.TransitionFrame();
             RootFrame.Navigated += CompleteInitializePhoneApplication;
+            var brush = new ImageBrush
+            {
+                ImageSource = new System.Windows.Media.Imaging.BitmapImage(new Uri("Images/Background.jpg", UriKind.Relative)),
+                Opacity = 0.8d
+            };
 
+            RootFrame.Background = brush;
             // Handle navigation failures
             RootFrame.NavigationFailed += RootFrame_NavigationFailed;
 

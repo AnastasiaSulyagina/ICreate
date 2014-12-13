@@ -7,6 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:maps="clr-namespace:Microsoft.Phone.Maps.Controls;assembly=Microsoft.Phone.Maps"
     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:maptk="clr-namespace:Microsoft.Phone.Maps.Toolkit;assembly=Microsoft.Phone.Controls.Toolkit"
     x:Class="ICreate.MainPage"
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
@@ -14,34 +15,20 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     shell:SystemTray.IsVisible="True" Background="#0088C7D4">
-    <toolkit:TransitionService.NavigationInTransition>
-        <toolkit:NavigationInTransition>
-            <toolkit:NavigationInTransition.Backward>
-                <toolkit:TurnstileTransition Mode="BackwardIn"/>
-            </toolkit:NavigationInTransition.Backward>
-            <toolkit:NavigationInTransition.Forward>
-                <toolkit:TurnstileTransition Mode="ForwardIn"/>
-            </toolkit:NavigationInTransition.Forward>
-        </toolkit:NavigationInTransition>
-    </toolkit:TransitionService.NavigationInTransition>
-    
-    <toolkit:TransitionService.NavigationOutTransition>
-        <toolkit:NavigationOutTransition>
-            <toolkit:NavigationOutTransition.Backward>
-                <toolkit:TurnstileTransition Mode="BackwardOut"/>
-            </toolkit:NavigationOutTransition.Backward>
-            <toolkit:NavigationOutTransition.Forward>
-                <toolkit:TurnstileTransition Mode="ForwardOut"/>
-            </toolkit:NavigationOutTransition.Forward>
-        </toolkit:NavigationOutTransition>
-    </toolkit:TransitionService.NavigationOutTransition>
-    
+    <phone:PhoneApplicationPage.Resources>
+        <DataTemplate x:Key="PushpinContentTemplate">
+            <maptk:Pushpin Content="{Binding description}" />
+        </DataTemplate>
+
+    </phone:PhoneApplicationPage.Resources>
+
     <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#FFC0392B" ForegroundColor="#FFD1D6D9">
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#FFE6E6E6" ForegroundColor="#FFC0392B">
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="мои события"/>
             </shell:ApplicationBar.MenuItems>
             <shell:ApplicationBarIconButton x:Name="AddButton" IconUri="/Images/add.png" Text="добавить" Click="AddButton_Click" />
+            <shell:ApplicationBarIconButton x:Name="RefreshButton" IconUri="/Assets/AppBar/refresh.png" Text="обновить" Click="RefreshButton_Click"/>
             <shell:ApplicationBarIconButton x:Name="ToListButton" IconUri="/Images/list.png" Text="к списку" Click="ToListButton_Click"/>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
@@ -81,12 +68,28 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <maps:Map HorizontalAlignment="Left"  VerticalAlignment="Top" Loaded="Map_Loaded" Height="616" Width="480" BorderThickness="0,4,0,0" BorderBrush="#B221201E"/>
+            <maps:Map x:Name="map" HorizontalAlignment="Left"  VerticalAlignment="Top" Loaded="Map_Loaded" 
+                      Height="626" Width="480" BorderThickness="0,4,0,0" BorderBrush="#B221201E" 
+                      Margin="0,0,0,-10" Hold="Map_Hold" Center="47.6097, -122.3331" 
+                      PedestrianFeaturesEnabled="true" Tap="Map_Tap" >
+                <maptk:MapExtensions.Children>
+                  <!--  <maptk:Pushpin x:Name="pin" Tap="Pushpin_Tap"/>-->
+                    <maptk:MapItemsControl Name="StoresMapItemsControl">
+                        <maptk:MapItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <maptk:Pushpin 
+                                   Content="{Binding Content}" Tap="Pushpin_Tap" MaxWidth="50" Width="50"/>
+                            </DataTemplate>
+                        </maptk:MapItemsControl.ItemTemplate>
+                    </maptk:MapItemsControl>
+                </maptk:MapExtensions.Children>
+            </maps:Map>
 
         </Grid>
-        <Image HorizontalAlignment="Left" Height="63" Margin="10,15,0,0" VerticalAlignment="Top" Width="67" Source="/Images/icon_96.png" Tap="Image_Tap"/>
-        <TextBlock Text="ясоздал!" Style="{StaticResource PhoneTextNormalStyle}" Margin="68,13,29,10" FontSize="40" Foreground="#FFD1D6D9" Tap="TextBlock_Tap"/>
-
+        <Grid x:Name="HeaderPanel" Margin="0,0,0,0" Grid.RowSpan="2" Background="#FFC0392B" Height="85">
+            <Image HorizontalAlignment="Left" Height="63" Margin="10,15,0,0" VerticalAlignment="Top" Width="67" Source="/Images/icon_96.png" Tap="Image_Tap"/>
+            <TextBlock Text="ясоздал!" Style="{StaticResource PhoneTextNormalStyle}" Margin="68,13,248,15" FontSize="40" Foreground="#FFD1D6D9" Tap="TextBlock_Tap"/>
+        </Grid>
         <!--Uncomment to see an alignment grid to help ensure your controls are
             aligned on common boundaries.  The image has a top margin of -32px to
             account for the System Tray. Set this to 0 (or remove the margin altogether)

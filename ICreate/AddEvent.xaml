@@ -23,7 +23,7 @@
             </toolkit:NavigationInTransition.Forward>
         </toolkit:NavigationInTransition>
     </toolkit:TransitionService.NavigationInTransition>
-    
+
     <toolkit:TransitionService.NavigationOutTransition>
         <toolkit:NavigationOutTransition>
             <toolkit:NavigationOutTransition.Backward>
@@ -34,73 +34,59 @@
             </toolkit:NavigationOutTransition.Forward>
         </toolkit:NavigationOutTransition>
     </toolkit:TransitionService.NavigationOutTransition>
-    
 
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#FFE6E6E6" ForegroundColor="#FFC0392B">
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="мои события"/>
+                <shell:ApplicationBarMenuItem Text="пригласить друзей"/>
+            </shell:ApplicationBar.MenuItems>
+            <shell:ApplicationBarIconButton x:Name="CategoryButton" IconUri="/Toolkit.Content/ApplicationBar.Select.png" Text="категории" />
+            <shell:ApplicationBarIconButton x:Name="LocationButton" IconUri="/Images/location.png" Text="место" />
+            <shell:ApplicationBarIconButton x:Name="TimeButton" IconUri="/Images/time.png" Text="время" Click="TimeButton_Click" />
+            <shell:ApplicationBarIconButton x:Name="PhotosButton" IconUri="/Assets/AppBar/feature.camera.png" Text="фото"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="#FFC0392B">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" MinHeight="80"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
+    <ScrollViewer HorizontalAlignment="Left" Height="696" VerticalAlignment="Top" Width="480">
+
+        <Grid x:Name="LayoutRoot" Background="#FFC0392B">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" MinHeight="80"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
             <!--TitlePanel contains the name of the application and page title-->
 
-        <!--ContentPanel - place additional content here-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Visible" Background="White">
-            <Button Content="submit" HorizontalAlignment="Left" Height="95" Margin="211,502,0,0" VerticalAlignment="Top" Width="259" Click="Button_Click" BorderThickness="0">
-                <Button.BorderBrush>
-                    <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
-                </Button.BorderBrush>
-                <Button.Background>
-                    <SolidColorBrush Color="#FFD1D4D6"/>
-                </Button.Background>
-                <Button.Foreground>
-                    <SolidColorBrush Color="Black"/>
-                </Button.Foreground>
-            </Button>
-            <TextBox x:Name="Event_name" HorizontalAlignment="Left" Height="72" TextWrapping="Wrap" VerticalAlignment="Top" Width="460" BorderThickness="0,0,0,2" Text="Event Name" Margin="10,10,0,0">
-                <TextBox.SelectionBackground>
-                    <SolidColorBrush Color="{StaticResource PhoneBackgroundColor}"/>
-                </TextBox.SelectionBackground>
-                <TextBox.SelectionForeground>
-                    <SolidColorBrush Color="{StaticResource PhoneForegroundColor}"/>
-                </TextBox.SelectionForeground>
-                <TextBox.Background>
-                    <SolidColorBrush Color="Transparent"/>
-                </TextBox.Background>
-                <TextBox.Foreground>
-                    <SolidColorBrush Color="#FF21201E"/>
-                </TextBox.Foreground>
-                <TextBox.BorderBrush>
-                    <SolidColorBrush Color="#FF7C2400"/>
-                </TextBox.BorderBrush>
-            </TextBox>
-            <TextBox x:Name="EventDescription" HorizontalAlignment="Left" Height="381" Margin="10,60,0,0" TextWrapping="Wrap" Text="Event description" VerticalAlignment="Top" Width="460" HorizontalScrollBarVisibility="Auto" BorderThickness="0,0,0,2" Padding="1">
-                <TextBox.Foreground>
-                    <SolidColorBrush Color="#FF21201E"/>
-                </TextBox.Foreground>
-                <TextBox.Background>
-                    <SolidColorBrush Color="Transparent"/>
-                </TextBox.Background>
-                <TextBox.BorderBrush>
-                    <SolidColorBrush Color="#FF7C2400"/>
-                </TextBox.BorderBrush>
-            </TextBox>
-            <Button Content="log in" HorizontalAlignment="Left" Height="95" Margin="10,502,0,0" VerticalAlignment="Top" Width="201" Click="Button_Click_1" BorderThickness="0">
-                <Button.BorderBrush>
-                    <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
-                </Button.BorderBrush>
-                <Button.Background>
-                    <SolidColorBrush Color="#FFD1D4D6"/>
-                </Button.Background>
-                <Button.Foreground>
-                    <SolidColorBrush Color="Black"/>
-                </Button.Foreground>
-            </Button>
-            <CheckBox Content="use current location" HorizontalAlignment="Left" Margin="10,425,0,0" VerticalAlignment="Top" Foreground="#FF852200" BorderBrush="#FF852200" Background="#FF852200"/>
+            <!--ContentPanel - place additional content here-->
+            <Grid x:Name="ContentPanel" Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Visible" Background="White">
+                <Button Content="создать" HorizontalAlignment="Right" Height="95" Margin="299,502,0,0" VerticalAlignment="Bottom" Width="171" Click="Button_Click" BorderThickness="0">
+                    <Button.BorderBrush>
+                        <SolidColorBrush Color="{StaticResource PhoneAccentColor}"/>
+                    </Button.BorderBrush>
+                    <Button.Background>
+                        <SolidColorBrush Color="#FFD1D4D6"/>
+                    </Button.Background>
+                    <Button.Foreground>
+                        <SolidColorBrush Color="Black"/>
+                    </Button.Foreground>
+                </Button>
+                <TextBox x:Name="EventDescription" Margin="10,10,10,95" TextWrapping="Wrap" Text="Event description" HorizontalScrollBarVisibility="Auto" BorderThickness="0,0,0,2" Padding="1" HorizontalContentAlignment="Left" VerticalScrollBarVisibility="Auto">
+                    <TextBox.Foreground>
+                        <SolidColorBrush Color="#FF21201E"/>
+                    </TextBox.Foreground>
+                    <TextBox.Background>
+                        <SolidColorBrush Color="Transparent"/>
+                    </TextBox.Background>
+                    <TextBox.BorderBrush>
+                        <SolidColorBrush Color="#FFC0392B"/>
+                    </TextBox.BorderBrush>
+                </TextBox>
 
+            </Grid>
+            <Grid x:Name="HeaderPanel" Margin="0,0,0,611" Grid.RowSpan="2" Background="#FFC0392B" Height="85">
+                <Image HorizontalAlignment="Left" Height="63" Margin="10,15,0,0" VerticalAlignment="Top" Width="67" Source="/Images/icon_96.png" Tap="Image_Tap"/>
+                <TextBlock Text="ясоздал!" Style="{StaticResource PhoneTextNormalStyle}" Margin="68,13,248,15" FontSize="40" Foreground="#FFD1D6D9" Tap="TextBlock_Tap"/>
+            </Grid>
         </Grid>
-        <Image HorizontalAlignment="Left" Height="63" Margin="10,15,0,0" VerticalAlignment="Top" Width="67" Source="/Images/icon_96.png" Tap="Image_Tap"/>
-        <TextBlock Text="ясоздал!" Style="{StaticResource PhoneTextNormalStyle}" Margin="68,13,29,15" FontSize="40" Foreground="#FFD1D6D9" Tap="TextBlock_Tap"/>
-    </Grid>
-
+    </ScrollViewer>
 </phone:PhoneApplicationPage>
