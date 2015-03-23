@@ -13,7 +13,7 @@ using System.Windows.Media;
 using System.Device.Location;
 using System.Windows.Input;
 using Microsoft.Phone.Maps.Toolkit;
-using Newtonsoft.Json;
+using Windows.Data.Json;
 using System.Collections.ObjectModel;
 
 namespace ICreate
@@ -43,7 +43,7 @@ namespace ICreate
                     {
                         pin = (Pushpin)obj;
                     }
-                    catch (Exception eeee)
+                    catch (Exception )
                     {
                         continue;
                     }
